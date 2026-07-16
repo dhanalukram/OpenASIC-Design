@@ -2,56 +2,70 @@
 
 ###############################################################################
 # OpenASIC-Design
-# Master Installer
+# Master Installation Script
 ###############################################################################
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-source "$SCRIPT_DIR/common.sh"
+source "$SCRIPT_DIR/config.sh"
 
-show_title
+clear
 
-print_info "Starting OpenASIC-Design Installation..."
-
+echo "=============================================================="
+echo "                  OpenASIC-Design"
+echo "      Open-Source ASIC Design Environment"
+echo "                     Version 1.0"
+echo "=============================================================="
+echo
+echo "Official Companion Repository"
+echo
+echo "Digital ASIC Design"
+echo "The Complete RTL-to-GDSII Methodology"
+echo "Using Open-Source EDA Tools"
+echo
+echo "Author"
+echo "Dr. Lukram Dhanachandra Singh"
+echo
+echo "Organization"
+echo "NIELIT Imphal"
+echo
+echo "=============================================================="
 echo
 
-###############################################################################
-# System Verification
-###############################################################################
-
+echo "[1/7] System Verification"
 bash "$SCRIPT_DIR/system_check.sh"
 
 echo
-
-###############################################################################
-# Install Required Packages
-###############################################################################
-
+echo "[2/7] Installing Common Packages"
 bash "$SCRIPT_DIR/packages.sh"
 
 echo
+echo "[3/7] Installing Digital Design Tools"
+bash "$SCRIPT_DIR/digital.sh"
 
-###############################################################################
-# Tool Installation
-###############################################################################
+echo
+echo "[4/7] Installing Qflow Toolchain"
+bash "$SCRIPT_DIR/qflow.sh"
 
-bash "$SCRIPT_DIR/docker.sh"
-bash "$SCRIPT_DIR/verilator.sh"
-bash "$SCRIPT_DIR/iverilog.sh"
-bash "$SCRIPT_DIR/gtkwave.sh"
-bash "$SCRIPT_DIR/yosys.sh"
-bash "$SCRIPT_DIR/opensta.sh"
-bash "$SCRIPT_DIR/magic.sh"
-bash "$SCRIPT_DIR/klayout.sh"
-bash "$SCRIPT_DIR/netgen.sh"
-bash "$SCRIPT_DIR/openroad.sh"
+echo
+echo "[5/7] Installing Analog/OpenPDK Toolchain"
+bash "$SCRIPT_DIR/analog.sh"
+
+echo
+echo "[6/7] Installing OpenLane Flow"
 bash "$SCRIPT_DIR/openlane.sh"
-bash "$SCRIPT_DIR/sky130.sh"
+
+echo
+echo "[7/7] Final Verification"
 bash "$SCRIPT_DIR/verify.sh"
 
 echo
-
-print_success "OpenASIC-Design framework completed."
-
+echo "=============================================================="
+echo " OpenASIC-Design Installation Completed Successfully"
+echo "=============================================================="
 echo
-print_info "Tool installation modules will be added in the next versions."
+echo "Repository : https://github.com/dhanalukram/OpenASIC-Design"
+echo
+echo "You may need to restart your terminal or WSL session"
+echo "before using some installed tools."
+echo
