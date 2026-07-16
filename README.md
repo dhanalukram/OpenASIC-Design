@@ -1,3 +1,4 @@
+  GNU nano 7.2                      README.md
 # OpenASIC-Design
 
 > Official Companion Repository for the Book
@@ -9,9 +10,9 @@
 
 ## Overview
 
-OpenASIC-Design is an open-source educational project that provides a complete RTL-to-GDSII ASIC design environment using open-source Electronic Design Automation (EDA) tools.
+OpenASIC-Design is an open-source educational project that provides a compl>
 
-This repository accompanies the book **Digital ASIC Design: The Complete RTL-to-GDSII Methodology Using Open-Source EDA Tools** and contains installation scripts, example designs, project files, and supporting documentation used throughout the book.
+This repository accompanies the book **Digital ASIC Design: The Complete RT>
 
 ---
 
@@ -35,16 +36,3 @@ OpenASIC-Design/
 ├── verify/
 └── assets/
 
-
-
----
-
-## Installation
-
-Installation instructions will be added in the next version.
-
----
-
-## License
-
-This project will be released under the Apache 2.0 License.
