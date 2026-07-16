@@ -35,18 +35,19 @@ echo
 # Tool Installation
 ###############################################################################
 
-# bash "$SCRIPT_DIR/docker.sh"
-# bash "$SCRIPT_DIR/verilator.sh"
-# bash "$SCRIPT_DIR/iverilog.sh"
-# bash "$SCRIPT_DIR/gtkwave.sh"
-# bash "$SCRIPT_DIR/yosys.sh"
-# bash "$SCRIPT_DIR/opensta.sh"
-# bash "$SCRIPT_DIR/magic.sh"
-# bash "$SCRIPT_DIR/klayout.sh"
-# bash "$SCRIPT_DIR/netgen.sh"
-# bash "$SCRIPT_DIR/openroad.sh"
-# bash "$SCRIPT_DIR/openlane.sh"
-# bash "$SCRIPT_DIR/sky130.sh"
+bash "$SCRIPT_DIR/docker.sh"
+bash "$SCRIPT_DIR/verilator.sh"
+bash "$SCRIPT_DIR/iverilog.sh"
+bash "$SCRIPT_DIR/gtkwave.sh"
+bash "$SCRIPT_DIR/yosys.sh"
+bash "$SCRIPT_DIR/opensta.sh"
+bash "$SCRIPT_DIR/magic.sh"
+bash "$SCRIPT_DIR/klayout.sh"
+bash "$SCRIPT_DIR/netgen.sh"
+bash "$SCRIPT_DIR/openroad.sh"
+bash "$SCRIPT_DIR/openlane.sh"
+bash "$SCRIPT_DIR/sky130.sh"
+bash "$SCRIPT_DIR/verify.sh"
 
 echo
 
