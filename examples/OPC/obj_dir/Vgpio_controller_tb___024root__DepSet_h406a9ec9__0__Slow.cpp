@@ -129,6 +129,7 @@ VL_ATTR_COLD void Vgpio_controller_tb___024root___ctor_var_reset(Vgpio_controlle
     vlSelf->gpio_controller_tb__DOT__gpio_in_i = VL_SCOPED_RAND_RESET_I(8, __VscopeHash, 15045845550942202210ull);
     vlSelf->gpio_controller_tb__DOT__gpio_out_o = VL_SCOPED_RAND_RESET_I(8, __VscopeHash, 49177104433376342ull);
     vlSelf->gpio_controller_tb__DOT__gpio_input_o = VL_SCOPED_RAND_RESET_I(8, __VscopeHash, 1264650754812629318ull);
+    vlSelf->gpio_controller_tb__DOT__uut__DOT__i = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 4814109188242103420ull);
     vlSelf->__Vtrigprevexpr___TOP__gpio_controller_tb__DOT__gpio_data_i__0 = VL_SCOPED_RAND_RESET_I(8, __VscopeHash, 8923990194493662591ull);
     vlSelf->__Vtrigprevexpr___TOP__gpio_controller_tb__DOT__gpio_dir_i__0 = VL_SCOPED_RAND_RESET_I(8, __VscopeHash, 1229977440981447893ull);
     vlSelf->__Vtrigprevexpr___TOP__gpio_controller_tb__DOT__gpio_in_i__0 = VL_SCOPED_RAND_RESET_I(8, __VscopeHash, 2056974190612097440ull);
@@ -137,4 +138,7 @@ VL_ATTR_COLD void Vgpio_controller_tb___024root___ctor_var_reset(Vgpio_controlle
     vlSelf->__Vtrigprevexpr___TOP__gpio_controller_tb__DOT__rst_n__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 6720455402088619503ull);
     vlSelf->__Vtrigprevexpr___TOP__gpio_controller_tb__DOT__clk__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 11759324727735849097ull);
     vlSelf->__VactDidInit = 0;
+    for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
+        vlSelf->__Vm_traceActivity[__Vi0] = 0;
+    }
 }

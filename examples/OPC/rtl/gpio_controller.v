@@ -58,14 +58,26 @@ module gpio_controller
 
 
 // Sequential logic
+integer i;
+
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         gpio_out_o   <= {GPIO_WIDTH{1'b0}};
         gpio_input_o <= {GPIO_WIDTH{1'b0}};
     end
     else begin
-        gpio_out_o   <= gpio_data_i & gpio_dir_i;
+
+        // Sample all GPIO inputs every clock cycle
         gpio_input_o <= gpio_in_i;
+
+        // Drive GPIO outputs based on direction
+        for (i = 0; i < GPIO_WIDTH; i = i + 1) begin
+            if (gpio_dir_i[i])
+                gpio_out_o[i] <= gpio_data_i[i];
+            else
+                gpio_out_o[i] <= 1'b0;
+        end
+
     end
 end
 

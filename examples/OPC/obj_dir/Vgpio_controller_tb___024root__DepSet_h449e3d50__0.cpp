@@ -29,27 +29,52 @@ VL_INLINE_OPT VlCoroutine Vgpio_controller_tb___024root___eval_initial__TOP__Vti
                                          nullptr, "tb/gpio_controller_tb.v", 
                                          92);
     vlSelfRef.gpio_controller_tb__DOT__rst_n = 1U;
+    co_await vlSelfRef.__VdlySched.delay(0x2710ULL, 
+                                         nullptr, "tb/gpio_controller_tb.v", 
+                                         95);
+    if (((0U == (IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_out_o)) 
+         & (0U == (IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_input_o)))) {
+        VL_WRITEF_NX("PASS : Reset\n",0);
+    } else {
+        VL_WRITEF_NX("FAIL : Reset\n",0);
+    }
     VL_WRITEF_NX("Test Case 1 : Output Mode\n",0);
     vlSelfRef.gpio_controller_tb__DOT__gpio_dir_i = 0xffU;
     vlSelfRef.gpio_controller_tb__DOT__gpio_data_i = 0xa5U;
     co_await vlSelfRef.__VdlySched.delay(0x4e20ULL, 
                                          nullptr, "tb/gpio_controller_tb.v", 
-                                         105);
+                                         113);
+    if ((0xa5U == (IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_out_o))) {
+        VL_WRITEF_NX("PASS : Output Mode\n",0);
+    } else {
+        VL_WRITEF_NX("FAIL : Output Mode\n",0);
+    }
     VL_WRITEF_NX("Test Case 2 : Input Mode\n",0);
     vlSelfRef.gpio_controller_tb__DOT__gpio_dir_i = 0U;
     vlSelfRef.gpio_controller_tb__DOT__gpio_in_i = 0x3cU;
     co_await vlSelfRef.__VdlySched.delay(0x4e20ULL, 
                                          nullptr, "tb/gpio_controller_tb.v", 
-                                         117);
+                                         130);
+    if ((0x3cU == (IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_input_o))) {
+        VL_WRITEF_NX("PASS : Input Mode\n",0);
+    } else {
+        VL_WRITEF_NX("FAIL : Input Mode\n",0);
+    }
     VL_WRITEF_NX("Test Case 3 : Mixed Mode\n",0);
     vlSelfRef.gpio_controller_tb__DOT__gpio_dir_i = 0xf0U;
     vlSelfRef.gpio_controller_tb__DOT__gpio_data_i = 0xa0U;
     vlSelfRef.gpio_controller_tb__DOT__gpio_in_i = 0xfU;
     co_await vlSelfRef.__VdlySched.delay(0x4e20ULL, 
                                          nullptr, "tb/gpio_controller_tb.v", 
-                                         130);
-    VL_WRITEF_NX("----------------------------------------------\nGPIO Controller Verification Completed\n----------------------------------------------\n",0);
-    VL_FINISH_MT("tb/gpio_controller_tb.v", 140, "");
+                                         147);
+    if (((0xa0U == (IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_out_o)) 
+         & (0xfU == (IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_input_o)))) {
+        VL_WRITEF_NX("PASS : Mixed Mode\n",0);
+    } else {
+        VL_WRITEF_NX("FAIL : Mixed Mode\n",0);
+    }
+    VL_WRITEF_NX("==============================================\n GPIO Controller Verification Completed\n==============================================\n",0);
+    VL_FINISH_MT("tb/gpio_controller_tb.v", 162, "");
 }
 
 #ifdef VL_DEBUG

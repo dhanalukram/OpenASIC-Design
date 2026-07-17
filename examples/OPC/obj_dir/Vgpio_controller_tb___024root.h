@@ -34,7 +34,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vgpio_controller_tb___024root final : public 
     CData/*0:0*/ __Vtrigprevexpr___TOP__gpio_controller_tb__DOT__clk__0;
     CData/*0:0*/ __VactDidInit;
     CData/*0:0*/ __VactContinue;
+    IData/*31:0*/ gpio_controller_tb__DOT__uut__DOT__i;
     IData/*31:0*/ __VactIterCount;
+    VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
     VlDelayScheduler __VdlySched;
     VlTriggerVec<9> __VactTriggered;
     VlTriggerVec<9> __VnbaTriggered;

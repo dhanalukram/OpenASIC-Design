@@ -52,6 +52,7 @@ void Vgpio_controller_tb___024root___eval_nba(Vgpio_controller_tb___024root* vlS
     }
     if ((0xc0ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         Vgpio_controller_tb___024root___nba_sequent__TOP__1(vlSelf);
+        vlSelfRef.__Vm_traceActivity[1U] = 1U;
     }
 }
 
@@ -61,11 +62,12 @@ VL_INLINE_OPT void Vgpio_controller_tb___024root___nba_sequent__TOP__1(Vgpio_con
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     if (vlSelfRef.gpio_controller_tb__DOT__rst_n) {
+        vlSelfRef.gpio_controller_tb__DOT__uut__DOT__i = 8U;
         vlSelfRef.gpio_controller_tb__DOT__gpio_input_o 
             = vlSelfRef.gpio_controller_tb__DOT__gpio_in_i;
         vlSelfRef.gpio_controller_tb__DOT__gpio_out_o 
-            = ((IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_data_i) 
-               & (IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_dir_i));
+            = ((IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_dir_i) 
+               & (IData)(vlSelfRef.gpio_controller_tb__DOT__gpio_data_i));
     } else {
         vlSelfRef.gpio_controller_tb__DOT__gpio_input_o = 0U;
         vlSelfRef.gpio_controller_tb__DOT__gpio_out_o = 0U;

@@ -92,6 +92,14 @@ module gpio_controller_tb;
         #20;
         rst_n = 1'b1;
 
+	#10;
+
+	if ((gpio_out_o == 8'h00) &&
+    	(gpio_input_o == 8'h00))
+	    $display("PASS : Reset");
+	else
+	    $display("FAIL : Reset");
+
         //--------------------------------------------------------------
         // Test Case 1
         // Configure all GPIOs as outputs
@@ -103,6 +111,11 @@ module gpio_controller_tb;
         gpio_data_i = 8'hA5;
 
         #20;
+	
+	if (gpio_out_o == 8'hA5)
+	    $display("PASS : Output Mode");
+	else
+	    $display("FAIL : Output Mode");
 
         //--------------------------------------------------------------
         // Test Case 2
@@ -115,6 +128,10 @@ module gpio_controller_tb;
         gpio_in_i  = 8'h3C;
 
         #20;
+	if (gpio_input_o == 8'h3C)
+    		$display("PASS : Input Mode");
+	else
+    		$display("FAIL : Input Mode");
 
         //--------------------------------------------------------------
         // Test Case 3
@@ -129,14 +146,19 @@ module gpio_controller_tb;
 
         #20;
 
+	if ((gpio_out_o == 8'hA0) &&
+	    (gpio_input_o == 8'h0F))
+	    $display("PASS : Mixed Mode");
+	else
+	    $display("FAIL : Mixed Mode");	
+
         //--------------------------------------------------------------
         // End Simulation
         //--------------------------------------------------------------
 
-        $display("----------------------------------------------");
-        $display("GPIO Controller Verification Completed");
-        $display("----------------------------------------------");
-
+        $display("==============================================");
+	$display(" GPIO Controller Verification Completed");
+	$display("==============================================");
         $finish;
 
     end
