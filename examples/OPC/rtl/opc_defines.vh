@@ -18,6 +18,22 @@
 `define GPIO_IN_ADDR        8'h08
 `define GPIO_OUT_ADDR       8'h0C
 
+/**********************************************************************
+* Register File Indices
+**********************************************************************/
+
+`define GPIO_DATA_REG      0
+`define GPIO_DIR_REG       1
+
+`define TIMER_CTRL_REG     2
+`define TIMER_VALUE_REG    3
+
+`define UART_CTRL_REG      4
+`define UART_STATUS_REG    5
+
+`define SPI_CTRL_REG       6
+`define SPI_STATUS_REG     7
+
 //==============================================================
 // Future Peripheral Registers
 //==============================================================
