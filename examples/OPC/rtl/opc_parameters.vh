@@ -18,6 +18,15 @@ parameter DATA_WIDTH = 32;
 parameter ADDR_WIDTH = 8;
 parameter GPIO_WIDTH = 8;
 parameter NUM_REGISTERS = 8;
+
+//----------------------------------------------------------------------
+// APB Parameters
+//----------------------------------------------------------------------
+
+parameter APB_ADDR_WIDTH = 32;
+parameter REG_ADDR_LSB   = 2;
+
+
 //==============================================================
 // Future Expansion
 //==============================================================
