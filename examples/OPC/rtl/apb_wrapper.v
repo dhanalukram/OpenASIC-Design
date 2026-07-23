@@ -64,6 +64,18 @@ wire apb_access_w;
 wire apb_write_access_w;
 wire apb_read_access_w;
 
+
+///////////////////////////////////////////////////////////////////////////////
+// Address Decode
+///////////////////////////////////////////////////////////////////////////////
+
+wire [ADDR_WIDTH-1:0] reg_addr_w;
+wire                  valid_addr_w;
+
+assign reg_addr_w = PADDR[REG_ADDR_LSB + ADDR_WIDTH - 1 :
+                          REG_ADDR_LSB];
+
+assign valid_addr_w = (reg_addr_w < NUM_REGISTERS);
 ///////////////////////////////////////////////////////////////////////////////
 // APB Transaction Detection
 ///////////////////////////////////////////////////////////////////////////////
@@ -121,38 +133,46 @@ begin
         //----------------------------------------------------------
 
         if(apb_write_access_w)
-        begin
+	begin
+	    PREADY <= 1'b1;
 
-            write_en_o <= 1'b1;
-
-            //addr_o <= PADDR[ADDR_WIDTH+1:2];
-	    addr_o <= PADDR[REG_ADDR_LSB + ADDR_WIDTH - 1 :
-                REG_ADDR_LSB];
-
-            wdata_o <= PWDATA;
-
-            PREADY <= 1'b1;
-
-        end
-
-	        //----------------------------------------------------------
+	    if(valid_addr_w)
+	    begin
+	        write_en_o <= 1'b1;
+	        addr_o <= PADDR[ADDR_WIDTH-1:0];
+		//addr_o     <= reg_addr_w;
+ 	        wdata_o    <= PWDATA;
+	        PSLVERR    <= 1'b0;
+	    end
+	    else
+	    begin
+	        write_en_o <= 1'b0;
+	        PSLVERR    <= 1'b1;
+	    end
+	end
+        //----------------------------------------------------------
         // APB Read
         //----------------------------------------------------------
 
         else if(apb_read_access_w)
-        begin
+	begin
+	    PREADY <= 1'b1;
 
-            read_en_o <= 1'b1;
-
-            //addr_o <= PADDR[ADDR_WIDTH+1:2];
-	    addr_o <= PADDR[REG_ADDR_LSB + ADDR_WIDTH - 1 :
-                REG_ADDR_LSB];
-
-            PRDATA <= rdata_i;
-
-            PREADY <= 1'b1;
-
-        end
+	    if(valid_addr_w)
+	    begin
+	        read_en_o <= 1'b1;
+	        addr_o <= PADDR[ADDR_WIDTH-1:0];
+		//addr_o    <= reg_addr_w;
+	        PRDATA    <= rdata_i;
+	        PSLVERR   <= 1'b0;
+	    end
+	    else
+	    begin
+	        read_en_o <= 1'b0;
+	        PRDATA    <= {DATA_WIDTH{1'b0}};
+	        PSLVERR   <= 1'b1;
+	    end
+	end
 
     end
 

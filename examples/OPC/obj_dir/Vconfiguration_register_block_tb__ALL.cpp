@@ -4,7 +4,6 @@
 #include "Vconfiguration_register_block_tb___024root__DepSet_hc315b0c0__0.cpp"
 #include "Vconfiguration_register_block_tb___024root__DepSet_h6a4a16b1__0.cpp"
 #include "Vconfiguration_register_block_tb__main.cpp"
-#include "Vconfiguration_register_block_tb__Trace__0.cpp"
 #include "Vconfiguration_register_block_tb__ConstPool_0.cpp"
 #include "Vconfiguration_register_block_tb___024root__Slow.cpp"
 #include "Vconfiguration_register_block_tb___024root__DepSet_hc315b0c0__0__Slow.cpp"
@@ -12,5 +11,3 @@
 #include "Vconfiguration_register_block_tb___024unit__Slow.cpp"
 #include "Vconfiguration_register_block_tb___024unit__DepSet_ha3ebec73__0__Slow.cpp"
 #include "Vconfiguration_register_block_tb__Syms.cpp"
-#include "Vconfiguration_register_block_tb__Trace__0__Slow.cpp"
-#include "Vconfiguration_register_block_tb__TraceDecls__0__Slow.cpp"

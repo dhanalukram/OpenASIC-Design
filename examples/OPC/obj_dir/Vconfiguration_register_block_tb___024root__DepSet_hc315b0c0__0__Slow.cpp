@@ -15,7 +15,7 @@ VL_ATTR_COLD void Vconfiguration_register_block_tb___024root___eval_initial__TOP
     // Body
     vlSelfRef.configuration_register_block_tb__DOT__clk = 0U;
     vlSymsp->_vm_contextp__->dumpfile(VL_CVT_PACK_STR_NW(8, Vconfiguration_register_block_tb__ConstPool__CONST_hc631b9ba_0));
-    vlSymsp->_traceDumpOpen();
+    VL_PRINTF_MT("-Info: tb/configuration_register_block_tb.v:85: $dumpvar ignored, as Verilated without --trace\n");
 }
 
 #ifdef VL_DEBUG

@@ -63,6 +63,7 @@ module configuration_register_block
 
     // Convert byte address to register index
     assign reg_index = addr_i[REG_INDEX_WIDTH+1:2];
+    //assign reg_index = addr_i[REG_INDEX_WIDTH-1:0];
 
     //------------------------------------------------------------------
     // Register Aliases
@@ -124,6 +125,7 @@ module configuration_register_block
     always @(*)
     begin
         if ((write_en_i || read_en_i) && (addr_i[1:0] != 2'b00))
+	//if ((write_en_i || read_en_i) && (addr_i >= NUM_REGISTERS))
             $display("WARNING: CRB - Unaligned register access at address %h", addr_i);
     end
 

@@ -26,10 +26,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vconfiguration_register_block_tb___024root fi
     CData/*0:0*/ __VactContinue;
     IData/*31:0*/ configuration_register_block_tb__DOT__wdata_i;
     IData/*31:0*/ configuration_register_block_tb__DOT__rdata_o;
-    IData/*31:0*/ configuration_register_block_tb__DOT__dut__DOT__i;
     IData/*31:0*/ __VactIterCount;
     VlUnpacked<IData/*31:0*/, 8> configuration_register_block_tb__DOT__dut__DOT__reg_file;
-    VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
     VlDelayScheduler __VdlySched;
     VlTriggerScheduler __VtrigSched_h8a5858c1__0;
     VlTriggerVec<1> __VstlTriggered;

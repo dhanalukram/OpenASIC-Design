@@ -15,7 +15,6 @@ void Vconfiguration_register_block_tb___024root___eval_initial(Vconfiguration_re
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     Vconfiguration_register_block_tb___024root___eval_initial__TOP(vlSelf);
-    vlSelfRef.__Vm_traceActivity[1U] = 1U;
     Vconfiguration_register_block_tb___024root___eval_initial__TOP__Vtiming__0(vlSelf);
     Vconfiguration_register_block_tb___024root___eval_initial__TOP__Vtiming__1(vlSelf);
 }
@@ -62,14 +61,12 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          101);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     __Vtask_configuration_register_block_tb__DOT__reset_dut__0__configuration_register_block_tb__DOT__unnamedblk1_1__DOT____Vrepeat0 = 1U;
     co_await vlSelfRef.__VtrigSched_h8a5858c1__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          101);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     __Vtask_configuration_register_block_tb__DOT__reset_dut__0__configuration_register_block_tb__DOT__unnamedblk1_1__DOT____Vrepeat0 = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__rst_n = 1U;
     co_await vlSelfRef.__VtrigSched_h8a5858c1__0.trigger(0U, 
@@ -77,7 +74,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          105);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     if (((0U == (0xffU & vlSelfRef.configuration_register_block_tb__DOT__dut__DOT__reg_file
                  [0U])) & (0U == (0xffU & vlSelfRef.configuration_register_block_tb__DOT__dut__DOT__reg_file
                                   [1U])))) {
@@ -92,7 +88,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          121);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__write_en_i = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i 
         = __Vtask_configuration_register_block_tb__DOT__write_register__1__address;
@@ -103,7 +98,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          127);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__write_en_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__wdata_i = 0U;
@@ -119,7 +113,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          146);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__read_en_i = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i 
         = __Vtask_configuration_register_block_tb__DOT__read_register__2__address;
@@ -128,7 +121,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          151);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__read_en_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i = 0U;
     if ((0xa5U == vlSelfRef.configuration_register_block_tb__DOT__rdata_o)) {
@@ -143,7 +135,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          121);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__write_en_i = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i 
         = __Vtask_configuration_register_block_tb__DOT__write_register__3__address;
@@ -154,7 +145,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          127);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__write_en_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__wdata_i = 0U;
@@ -170,7 +160,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          146);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__read_en_i = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i 
         = __Vtask_configuration_register_block_tb__DOT__read_register__4__address;
@@ -179,7 +168,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          151);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__read_en_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i = 0U;
     if ((0xffU == vlSelfRef.configuration_register_block_tb__DOT__rdata_o)) {
@@ -194,7 +182,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          121);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__write_en_i = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i 
         = __Vtask_configuration_register_block_tb__DOT__write_register__5__address;
@@ -205,7 +192,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          127);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__write_en_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__wdata_i = 0U;
@@ -216,7 +202,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          121);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__write_en_i = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i 
         = __Vtask_configuration_register_block_tb__DOT__write_register__6__address;
@@ -227,7 +212,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          127);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__write_en_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__wdata_i = 0U;
@@ -244,7 +228,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          146);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__read_en_i = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i 
         = __Vtask_configuration_register_block_tb__DOT__read_register__7__address;
@@ -253,7 +236,6 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
                                                          "@(posedge configuration_register_block_tb.clk)", 
                                                          "tb/configuration_register_block_tb.v", 
                                                          151);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.configuration_register_block_tb__DOT__read_en_i = 0U;
     vlSelfRef.configuration_register_block_tb__DOT__addr_i = 0U;
     if ((0U == vlSelfRef.configuration_register_block_tb__DOT__rdata_o)) {
@@ -265,9 +247,7 @@ VL_INLINE_OPT VlCoroutine Vconfiguration_register_block_tb___024root___eval_init
     co_await vlSelfRef.__VdlySched.delay(0x4e20ULL, 
                                          nullptr, "tb/configuration_register_block_tb.v", 
                                          249);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_FINISH_MT("tb/configuration_register_block_tb.v", 251, "");
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
 }
 
 void Vconfiguration_register_block_tb___024root___act_comb__TOP__0(Vconfiguration_register_block_tb___024root* vlSelf);
@@ -313,7 +293,6 @@ void Vconfiguration_register_block_tb___024root___eval_nba(Vconfiguration_regist
     // Body
     if ((3ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         Vconfiguration_register_block_tb___024root___nba_sequent__TOP__0(vlSelf);
-        vlSelfRef.__Vm_traceActivity[3U] = 1U;
     }
     if ((5ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         Vconfiguration_register_block_tb___024root___nba_comb__TOP__0(vlSelf);
@@ -339,9 +318,6 @@ VL_INLINE_OPT void Vconfiguration_register_block_tb___024root___nba_sequent__TOP
     // Body
     __VdlySet__configuration_register_block_tb__DOT__dut__DOT__reg_file__v0 = 0U;
     __VdlySet__configuration_register_block_tb__DOT__dut__DOT__reg_file__v1 = 0U;
-    if ((1U & (~ (IData)(vlSelfRef.configuration_register_block_tb__DOT__rst_n)))) {
-        vlSelfRef.configuration_register_block_tb__DOT__dut__DOT__i = 8U;
-    }
     if (vlSelfRef.configuration_register_block_tb__DOT__rst_n) {
         if (vlSelfRef.configuration_register_block_tb__DOT__write_en_i) {
             __VdlyVal__configuration_register_block_tb__DOT__dut__DOT__reg_file__v0 

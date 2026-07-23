@@ -156,10 +156,6 @@ VL_ATTR_COLD void Vconfiguration_register_block_tb___024root___ctor_var_reset(Vc
     for (int __Vi0 = 0; __Vi0 < 8; ++__Vi0) {
         vlSelf->configuration_register_block_tb__DOT__dut__DOT__reg_file[__Vi0] = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 5751399023529087305ull);
     }
-    vlSelf->configuration_register_block_tb__DOT__dut__DOT__i = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 599910571234374820ull);
     vlSelf->__Vtrigprevexpr___TOP__configuration_register_block_tb__DOT__clk__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 7717324328385086224ull);
     vlSelf->__Vtrigprevexpr___TOP__configuration_register_block_tb__DOT__rst_n__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 3098086388918478581ull);
-    for (int __Vi0 = 0; __Vi0 < 4; ++__Vi0) {
-        vlSelf->__Vm_traceActivity[__Vi0] = 0;
-    }
 }
