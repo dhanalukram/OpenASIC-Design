@@ -37,7 +37,7 @@ module apb_wrapper
     input wire [APB_ADDR_WIDTH-1:0] PADDR,
     input  wire [DATA_WIDTH-1:0]    PWDATA,
 
-    output reg  [DATA_WIDTH-1:0]    PRDATA,
+    output wire  [DATA_WIDTH-1:0]    PRDATA,
     output reg                      PREADY,
     output reg                      PSLVERR,
 
@@ -64,7 +64,7 @@ wire apb_access_w;
 wire apb_write_access_w;
 wire apb_read_access_w;
 
-
+assign PRDATA = rdata_i;
 ///////////////////////////////////////////////////////////////////////////////
 // Address Decode
 ///////////////////////////////////////////////////////////////////////////////
@@ -108,7 +108,7 @@ begin
         addr_o     <= {ADDR_WIDTH{1'b0}};
         wdata_o    <= {DATA_WIDTH{1'b0}};
 
-        PRDATA     <= {DATA_WIDTH{1'b0}};
+        //PRDATA     <= {DATA_WIDTH{1'b0}};
 
         PREADY     <= 1'b0;
         PSLVERR    <= 1'b0;
@@ -163,13 +163,13 @@ begin
 	        read_en_o <= 1'b1;
 	        addr_o <= PADDR[ADDR_WIDTH-1:0];
 		//addr_o    <= reg_addr_w;
-	        PRDATA    <= rdata_i;
+	        //PRDATA    <= rdata_i;
 	        PSLVERR   <= 1'b0;
 	    end
 	    else
 	    begin
 	        read_en_o <= 1'b0;
-	        PRDATA    <= {DATA_WIDTH{1'b0}};
+	        //PRDATA    <= {DATA_WIDTH{1'b0}};
 	        PSLVERR   <= 1'b1;
 	    end
 	end
